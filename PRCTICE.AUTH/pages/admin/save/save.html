@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Students</title>
+    <link rel="stylesheet" href="save.css">
+</head>
+<body>
+    <div id="formX">
+        <h2 id="h2">Add Student</h2>
+        <form id="studentForm">
+            <input placeholder="firstname" type="text" id="firstname" name="firstname" required><br><br>
+    
+            <input placeholder="lastname" type="text" id="lastname" name="lastname" required><br><br>
+        
+            <input placeholder="Enter Email" type="email" id="email" name="email" required><br><br>
+
+            <input placeholder="Enter your Password" type="password" id="password" name="password" required><br><br>
+
+            <input placeholder="Enter CNIC" type="number" id="cnic" name="cnic" required><br><br>
+            
+            <input type="hidden" id="usertype" name="usertype" value="Student"><br><br>
+            
+            <button type="button" onclick="addStudent()">Submit</button>
+            <button   ><a id="btnlink" href="../../results/result.html">View Results</a></button>
+            <button   ><a id="btnlink" href="../uploadmarks/marks.html">Upload Marks</a></button>
+        </form>
+    </div>
+    
+
+
+    <script type="module" src="save.js"></script>
+</body>
+</html>
