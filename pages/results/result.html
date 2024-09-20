@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+
+<body>
+    <div id="formX">
+        <h2>Check Your Results</h2>
+        <form id="resultForm">
+            <input placeholder="Enter Your CNIC" type="text" id="cnic" name="cnic" required><br><br>
+            <button type="button" onclick="getResults()">Search Results</button>
+            <a id="homelink" href="../../index.html">Home</a>
+        </form>
+
+        <div id="resultsTable"></div>
+    </div>
+
+    <script type="module" src="result.js"></script>
+</body>
+
+</html>

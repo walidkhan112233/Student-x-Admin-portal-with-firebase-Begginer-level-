@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Entry</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="bg-blue-600 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo/Brand -->
+      <a href="#" class="text-white text-2xl font-bold">Student Portal</a>
+
+      <!-- Hamburger Menu (for small screens) -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Nav Links -->
+      <div class="hidden md:flex space-x-6">
+        <a href="pages/signup/signup.html" class="text-white hover:text-gray-300">Signup</a>
+        <a href="pages/login/login.html" class="text-white hover:text-gray-300">Login</a>
+        <a href="pages/results/result.html" class="text-white hover:text-gray-300">Results</a>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <a href="pages/signup/signup.html" class="block text-white py-2">Signup</a>
+      <a href="pages/login/login.html" class="block text-white py-2">Login</a>
+      <a href="pages/results/result.html" class="block text-white py-2">Result</a>
+    </div>
+  </nav>
+
+
+  <p> <br>
+    Students SignUp or LogIn to see Results according to there CNIC
+    <br><br>
+    Admin's LogIn or SignUp to add students and Upload Results
+  </p>
+
+
+
+
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
