@@ -40,16 +40,15 @@ window.login = () => {
         .then((res) => {
             console.log(res);
 
-            // uid assignment
+         
             obj.id = res.user.uid;
 
-            // Remove password for security reasons
+            
             delete obj.password;
 
-            // Reference to the user document in Firestore
-            const userDocRef = doc(db, "user Credentials", obj.id); // Remove extra "!" from doc path
+            const userDocRef = doc(db, "user Credentials", obj.id); 
 
-            // Fetch user data from Firestore
+           
             getDoc(userDocRef)
                 .then((docSnap) => {
                     if (docSnap.exists()) {
@@ -57,7 +56,6 @@ window.login = () => {
                         console.log("User data from Firestore:", userData);
                         alert("Login successful! Welcome back!");
 
-                        // Check user type and redirect accordingly
                         if (userData.usertype === 'Admin') {
                             window.location.href = '../admin/save/save.html'; // Redirect to Admin area
                         } else if (userData.usertype === 'Student') {
